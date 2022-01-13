@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: qgis-server
-  namespace: qgis
+  namespace: qgis-server
 spec:
   replicas: 1
   selector:
@@ -47,7 +47,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: qgis-nginx
-  namespace: qgis
+  namespace: qgis-server
 spec:
   replicas: 1
   selector:
