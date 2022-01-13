@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: qgis-server
-  namespace: default
+  namespace: qgis
 spec:
   replicas: 1
   selector:
@@ -34,14 +34,14 @@ spec:
       volumes:
         - name: qgis-data
           hostPath:
-            path: REPLACE_WITH_FULL_PATH/data
+            path: /mnt/raid/minio/data2broadcast/klos/qgis_server/data
 
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: qgis-nginx
-  namespace: default
+  namespace: qgis
 spec:
   replicas: 1
   selector:
@@ -63,4 +63,4 @@ spec:
       volumes:
         - name: nginx-conf
           hostPath:
-            path: REPLACE_WITH_FULL_PATH/nginx.conf
+            path: /mnt/raid/minio/data2broadcast/klos/qgis_server/nginx.conf

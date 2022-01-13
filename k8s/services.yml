@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: qgis-server
-  namespace: default
+  namespace: qgis
 spec:
   type: ClusterIP
   selector:
@@ -15,7 +15,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: qgis-nginx
-  namespace: default
+  namespace: qgis
 spec:
   type: NodePort
   selector:
