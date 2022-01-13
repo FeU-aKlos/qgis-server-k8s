@@ -26,6 +26,12 @@ spec:
               value: "0"
             - name: DEBUG
               value: "1"
+            - name: ftp_proxy
+              value: http://10.0.0.10:3128
+            - name: http_proxy
+              value: http://10.0.0.10:3128
+            - name: https_proxy
+              value: http://10.0.0.10:3128
           ports:
             - containerPort: 5555
           volumeMounts:
